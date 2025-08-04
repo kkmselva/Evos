@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taom tafsiloti</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar (index.html bilan mos) -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Evos</a>
+      <ul class="nav-links">
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="index.html#haqida">Haqida</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Single Page content -->
+  <main class="container" style="padding: 4rem 0; text-align: center; background-color:#e2e2df ;">
+    <div id="item-detail">
+      <img id="item-image" src="" alt="" style="width: 100%; max-width: 400px; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+      <h1 id="item-title" style="margin: 1.5rem 0;"></h1>
+      <p id="item-price" style="font-size: 1.5rem; color:#294430 ;"></p>
+      <p id="item-desc" style="margin: 1rem 0; line-height: 1.6;"></p>
+      <a href="fast_food_site (1).html" class="btn">Ortga qaytish</a>
+    </div>
+  </main>
+
+  <!-- AOS va custom script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    // Menu elementlari (index.html’dagi tartibga mos) :contentReference[oaicite:2]{index=2}
+    const itemData = [
+      { title: 'Kartoshka free',    img: './free.png',           price: '18 000', desc: 'Qovurilgan kartoshka bo‘laklari, achchiq va sho‘r ta’mi bilan.' },
+      { title: 'Pasta',             img: './pasta.png',           price: '80 000', desc: 'Krem sousda pishirilgan italyan makaronlari.' },
+      { title: 'Gamburger',         img: './pngwing.com (1).png', price: '45 000', desc: 'Mol go‘shti kotleti, pomidor, salat bargi va sos bilan.' },
+      { title: 'Hot-dog',           img: './hot-dog.png',           price: '25 000', desc: 'Issiq itcha kolbaska, xamir ichida, ketchup va xantal qo‘shilgan.' },
+      { title: 'Lavash',            img: './pngwing.com.png',     price: '35 000', desc: 'Go‘sht va sabzavotlar bilan o‘ralgan no‘xatli lavash.' },
+      { title: 'Pizza',             img: './pizza.png',           price: '90 000', desc: 'Pomidor sousi, pishloq va siz tanlagan toppinglar bilan.' },
+      { title: 'Sandwich',          img: './sandwich.png',        price: '53 000', desc: 'Ikki tost bo‘lagi orasida go‘sht, pishloq va sabzavotlar.' },
+      { title: 'Longer',            img: './longer2.png',         price: '27 000', desc: 'Uzoqcha to‘yimli non ichida cho‘zilgan pishloq.' }
+    ];
+
+    // URL’dan ?item= parametrini o‘qish
+    const params = new URLSearchParams(window.location.search);
+    const idx    = parseInt(params.get('item'), 10) - 1;
+
+    // Agar no‘to‘g‘ri parametr bo‘lsa, 1–elementga yo‘naltiramiz
+    const item = (idx >= 0 && idx < itemData.length) ? itemData[idx] : itemData[0];
+
+    // Sahifaga chiqarish
+    document.getElementById('item-image').src   = item.img;
+    document.getElementById('item-image').alt   = item.title;
+    document.getElementById('item-title').textContent = item.title;
+    document.getElementById('item-price').textContent = item.price + ' so‘m';
+    document.getElementById('item-desc').textContent  = item.desc;
+  </script>
+</body>
+</html>
