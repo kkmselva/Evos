@@ -1,0 +1,143 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fast Food Haven</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Evos</a>
+      <ul class="nav-links">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#haqida">Haqida</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </nav>
+
+
+
+  <!-- Carousel Section -->
+  <section class="carousel-section" data-aos="fade-up">
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="free.png" alt="Slide 1">
+        <img src="hot-dog.png" alt="Slide 2">
+        <img src="./pasta.png" alt="Slide 3">
+      </div>
+      <button class="carousel-prev">‹</button>
+      <button class="carousel-next">›</button>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container" data-aos="fade-down">
+      <h1>Sizning sevimli tez ovqatingiz issiq va yangi yetkazib beriladi</h1>
+      <p>Mazali gamburgerlar, kartoshka va boshqalar bir marta bosish masofasida.</p>
+      <a href="#menu" class="btn"> Menu</a>
+    </div>
+  </header>
+
+  <!-- Menu Cards -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Bizning Menu</h2>
+      <div class="card-grid">
+        <div class="card" data-aos="zoom-in">
+          <img src="./free.png" alt="Kartoshka free" />
+          <h3>Kartoshka free</h3>
+          <p class="price">18 000</p>
+          <button class="btn">Qo`shish</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="./pasta.png" alt="Pasta" />
+          <h3>pasta</h3>
+          <p class="price">80 000</p>
+          <button class="btn">Qo`shish</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="./pngwing.com (1).png" alt="Gamburger" />
+          <h3>Gamburger</h3>
+          <p class="price">45 000</p>
+          <button class="btn">Qo`shish</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="./hot-dog.png" alt="Hot-dog" />
+          <h3>Hot-dog</h3>
+          <p class="price">25 000</p>
+          <button class="btn">Qo`shish</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="./pngwing.com.png" alt="Lavash" />
+          <h3>Lavash</h3>
+          <p class="price">35 000</p>
+          <button class="btn">Qo`shish</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="./pizza.png" alt="Toca" />
+          <h3>Pizza</h3>
+          <p class="price">90 000</p>
+          <button class="btn">Qo`shish</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="./sandwich.png" alt="Toca" />
+          <h3>Sandwich</h3>
+          <p class="price">53 000</p>
+          <button class="btn">Qo`shish</button>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="./longer2.png" alt="Toca" />
+          <h3>Longer</h3>
+          <p class="price">27 000</p>
+          <button class="btn">Qo`shish</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER'DAN OLDIN CONTACT BO‘LIMI -->
+  <section id="contact" class="contact-section">
+    <h2>Bog‘lanish</h2>
+    <form class="contact-form">
+      <label for="name">Ismingiz:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Xabar:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn">Yuborish</button>
+    </form>
+    <!-- </section> -->
+
+    <!-- Footer -->
+    <section id="contact" class="contact-section">
+    <footer id="contact" data-aos="fade-up">
+      <div class="container">
+        <p>&copy; 2025 FastFood Haven. All rights reserved.</p>
+      </div>
+    </footer>
+  </section>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
